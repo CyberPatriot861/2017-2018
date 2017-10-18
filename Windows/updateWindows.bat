@@ -1,7 +1,7 @@
-@Echo off
-For %%# in (*.msu) Do (
-    Echo: Installing update: %%#
-    Wusa "%%#" /quiet /norestart
+@echo off
+for %%# in (*.msu) Do (
+    echo: Installing update: %%#
+    wusa "%%#" /quiet /norestart
 )
-Echo Windows Update finished.
+echo Windows Update finished.
 Pause&Exit
