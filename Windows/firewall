@@ -1,0 +1,21 @@
+rem Blocking Ports Windows 7
+rem rem is a command used to comment lines out
+
+rem name = The name of the rule. (Pick something descriptive)
+rem protocol = The protocol we are going to block (UDP or TCP for most cases)
+rem dir = The direction of the block. Can be IN or OUT
+rem remoteport = The port of the remote host that is going to be blocked
+rem action = Could be block or allow. In our case we want to block the connection
+
+netsh advfirewall firewall add rule name=”BlockFTP” protocol=TCP dir=in remoteport=21
+netsh advfirewall firewall add rule name=”BlockLDAP” protocol=TCP dir=in remoteport=389
+netsh advfirewall firewall add rule name=”BlockRDP” protocol=TCP dir=in remoteport=3389
+netsh advfirewall firewall add rule name=”BlockTelnet” protocol=TCP dir=in remoteport=23
+netsh advfirewall firewall add rule name=”BlockSNMP” protocol=UDP dir=in remoteport=161
+netsh advfirewall firewall add rule name=”BlockHTTP” protocol=TCP dir=in remoteport=80
+
+rem try blocking ssh
+netsh advfirewall firewall add rule name=”BlockSSH” protocol=TCP dir=in remoteport=22
+
+rem delete rule for ssh if necessary 
+netsh advfirewall firewall delete rule name=”BlockSSH”
