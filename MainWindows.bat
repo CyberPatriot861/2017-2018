@@ -79,34 +79,34 @@ if exist C:\Windows\System32\ntrights.exe (
 	echo Installation succeeded, managing user rights..
 	set remove=("Backup Operators" "Everyone" "Power Users" "Users" "NETWORK SERVICE" "LOCAL SERVICE" "Remote Desktop User" "ANONOYMOUS LOGON" "Guest" "Performance Log Users")
 	for %%a in (%remove%) do (
-			ntrights -U %%a -R SeNetworkLogonRight 
-			ntrights -U %%a -R SeIncreaseQuotaPrivilege
-			ntrights -U %%a -R SeInteractiveLogonRight
-			ntrights -U %%a -R SeRemoteInteractiveLogonRight
-			ntrights -U %%a -R SeSystemtimePrivilege
-			ntrights -U %%a +R SeDenyNetworkLogonRight
-			ntrights -U %%a +R SeDenyRemoteInteractiveLogonRight
-			ntrights -U %%a -R SeProfileSingleProcessPrivilege
-			ntrights -U %%a -R SeBatchLogonRight
-			ntrights -U %%a -R SeUndockPrivilege
-			ntrights -U %%a -R SeRestorePrivilege
-			ntrights -U %%a -R SeShutdownPrivilege
+			NTRIGHTS -U %%a -R SeNetworkLogonRight 
+			NTRIGHTS -U %%a -R SeIncreaseQuotaPrivilege
+			NTRIGHTS -U %%a -R SeInteractiveLogonRight
+			NTRIGHTS -U %%a -R SeRemoteInteractiveLogonRight
+			NTRIGHTS -U %%a -R SeSystemtimePrivilege
+			NTRIGHTS -U %%a +R SeDenyNetworkLogonRight
+			NTRIGHTS -U %%a +R SeDenyRemoteInteractiveLogonRight
+			NTRIGHTS -U %%a -R SeProfileSingleProcessPrivilege
+			NTRIGHTS -U %%a -R SeBatchLogonRight
+			NTRIGHTS -U %%a -R SeUndockPrivilege
+			NTRIGHTS -U %%a -R SeRestorePrivilege
+			NTRIGHTS -U %%a -R SeShutdownPrivilege
 		)
-		ntrights -U "Administrators" -R SeImpersonatePrivilege
-		ntrights -U "Administrator" -R SeImpersonatePrivilege
-		ntrights -U "SERVICE" -R SeImpersonatePrivilege
-		ntrights -U "LOCAL SERVICE" +R SeImpersonatePrivilege
-		ntrights -U "NETWORK SERVICE" +R SeImpersonatePrivilege
-		ntrights -U "Administrators" +R SeMachineAccountPrivilege
-		ntrights -U "Administrator" +R SeMachineAccountPrivilege
-		ntrights -U "Administrators" -R SeIncreaseQuotaPrivilege
-		ntrights -U "Administrator" -R SeIncreaseQuotaPrivilege
-		ntrights -U "Administrators" -R SeDebugPrivilege
-		ntrights -U "Administrator" -R SeDebugPrivilege
-		ntrights -U "Administrators" +R SeLockMemoryPrivilege
-		ntrights -U "Administrator" +R SeLockMemoryPrivilege
-		ntrights -U "Administrators" -R SeBatchLogonRight
-		ntrights -U "Administrator" -R SeBatchLogonRight
+		NTRIGHTS -U "Administrators" -R SeImpersonatePrivilege
+		NTRIGHTS -U "Administrator" -R SeImpersonatePrivilege
+		NTRIGHTS -U "SERVICE" -R SeImpersonatePrivilege
+		NTRIGHTS -U "LOCAL SERVICE" +R SeImpersonatePrivilege
+		NTRIGHTS -U "NETWORK SERVICE" +R SeImpersonatePrivilege
+		NTRIGHTS -U "Administrators" +R SeMachineAccountPrivilege
+		NTRIGHTS -U "Administrator" +R SeMachineAccountPrivilege
+		NTRIGHTS -U "Administrators" -R SeIncreaseQuotaPrivilege
+		NTRIGHTS -U "Administrator" -R SeIncreaseQuotaPrivilege
+		NTRIGHTS -U "Administrators" -R SeDebugPrivilege
+		NTRIGHTS -U "Administrator" -R SeDebugPrivilege
+		NTRIGHTS -U "Administrators" +R SeLockMemoryPrivilege
+		NTRIGHTS -U "Administrator" +R SeLockMemoryPrivilege
+		NTRIGHTS -U "Administrators" -R SeBatchLogonRight
+		NTRIGHTS -U "Administrator" -R SeBatchLogonRight
 		echo Managed User Rights
 )
 goto:EOF
