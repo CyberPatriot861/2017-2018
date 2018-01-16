@@ -1,5 +1,5 @@
 @echo off
-set functions=checkFiles firewall lsp audit usrRights services winFeatures registry checkUsr misc netShare flushDNS defAccounts passwords rdp installMalwarebytes installAVG installMBAnti installMBSA installRevo installSUPER lockdown tools verifySys
+set functions=uptFirefox checkFiles firewall lsp audit usrRights services winFeatures registry checkUsr misc netShare flushDNS defAccounts passwords rdp installMalwarebytes installAVG installMBAnti installMBSA installRevo installSUPER lockdown tools verifySys
 ::Get current running directory
 set path=%~dp0
 echo %path%output> "%path%resources\path.txt"
