@@ -1,23 +1,25 @@
 # 2017-2018
-README
-1)Read Forensic Questions
-Answer questions
-Users
-Change all the passwords
-Set password policies
-Minimum length (8)
-Minimum complexity (must have number, capital, etc.)
-Maximum lifetime (30 for admins, 90 for others)
-Minimum lifetime (7-10)
-Set Account Lockout Policy
-5 invalid attempts
-30 minute lockout
-Reset account lockout counter after 30 minutes
-Administrators -> Users
-Delete unauthorized users
-Keep files of the deleted users
-Update
-Web browser
+1. README
+2. Read Forensic Questions
+3. Answer questions
+4. Users
+5. Change all the passwords
+6. Set password policies
+  * Minimum length (8)
+  * Minimum complexity (must have number, capital, etc.)
+  * Maximum lifetime (30 for admins, 90 for others)
+  * Minimum lifetime (7-10)
+7. Set Account Lockout Policy
+  * 5 invalid attempts
+  * 30 minute lockout
+  * Reset account lockout counter after 30 minutes
+8. Manage Users
+  * Administrators -> Users
+  * Delete unauthorized users
+  * Keep files of the deleted users
+9. Update
+  * Web browser
+```batch
 @echo off
 set "FirefoxVersion=37"
 rem Get path of installed Firefox directly from Windows registry.
@@ -56,22 +58,23 @@ For %%# in (*.msu) Do (
 )
 Echo Windows Update finished.
 Pause&Exit
-Scenario-specific applications (Notepad++, backup web browser, etc.)
-Unauthorized files
-.MP3, .MP4, .MOV, .PNG, .JPEG, .JPG, .WAV
-Search downloads folder
-“Hacking.exe”
-Delete games
-Uninstall SAMBA (137)
-Audit Policies
-Firewall ( ͡° ͜ʖ ͡°) pew pew
-Block HTTP (80), TELNET (23), TCP, SAMBA (137, 138, 139, 445) 
-Block all incoming connections
-Possibly download an external firewall (AVG, McAffeeeeeeeeeee)
-Ports to block
-Telnet - TCP, 23SNMP - UDP, 161 and 162
-SAMBA - TCP, 139 and 445
-SAMBA - UDP, 137 and 138
-RDP - TCP and UDP, 3389 and 3390
-LDAP - TCP and UDP, 389
-FTP - TCP, 20 and 21
+```
+  * Scenario-specific applications (Notepad++, backup web browser, etc.)
+10. Unauthorized files
+  * .MP3, .MP4, .MOV, .PNG, .JPEG, .JPG, .WAV
+  * Search downloads folder
+  * “Hacking.exe”
+  * Delete games
+11. Uninstall SAMBA (137)
+12. Audit Policies
+13. Firewall
+  * Block HTTP (80), TELNET (23), TCP, SAMBA (137, 138, 139, 445) 
+  * Block all incoming connections
+  * Possibly download an external firewall (AVG, McAffeeeeeeeeeee)
+  * **Ports to block**
+    * Telnet - TCP, 23SNMP - UDP, 161 and 162
+    * SAMBA - TCP, 139 and 445
+    * SAMBA - UDP, 137 and 138
+    * RDP - TCP and UDP, 3389 and 3390
+    * LDAP - TCP and UDP, 389
+    * FTP - TCP, 20 and 21
